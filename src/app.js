@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 
 // Rotas
-app.use('/autors', autor_routes);
+app.use('/autor', autor_routes);
 app.use('/livros', livro_routes);
 
 // Porta
