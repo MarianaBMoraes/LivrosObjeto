@@ -1,35 +1,35 @@
-const Autor = require("../models/livro_model.js");
+const Livro = require("../models/livro_model.js");
 
-exports.createAutor = async (req, res) => {
+exports.createLivro = async (req, res) => {
   try {
-    const livro = await Autor.create(req.body);
+    const livro = await Livro.create(req.body);
     res.status(201).json(livro);
   } catch (error) {
     res.status(400).json({ error: "Erro ao criar livro!" });
   }
 };
 
-exports.getAutor = async (req, res) => {
+exports.getLivro = async (req, res) => {
   try {
-    const livros = await Autor.find();
+    const livros = await Livro.find();
     res.status(200).json(livros);
   } catch (error) {
     res.status(400).json({ error: "Erro ao buscar livros!" });
   }
 };
 
-exports.getAutorById = async (req, res) => {
+exports.getLivroById = async (req, res) => {
   try {
-    const livro = await Autor.findById(req.params.id);
+    const livro = await Livro.findById(req.params.id);
     res.status(200).json(livro);
   } catch (error) {
-    res.status(404).json({ error: "Autor não encontrado!" });
+    res.status(404).json({ error: "Livro não encontrado!" });
   }
 };
 
-exports.updateAutor = async (req, res) => {
+exports.updateLivro = async (req, res) => {
   try {
-    const livro = await Auotr.findByIdAndUpdate(req.params.id, req.body, {
+    const livro = await Livro.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     res.status(200).json(livro);
@@ -38,9 +38,9 @@ exports.updateAutor = async (req, res) => {
   }
 };
 
-exports.deleteAutor = async (req, res) => {
+exports.deleteLivro = async (req, res) => {
   try {
-    await Autor.findByIdAndDelete(req.params.id);
+    await Livro.findByIdAndDelete(req.params.id);
     res.status(204).json();
   } catch (error) {
     res.status(400).json({ error: "Erro ao deletar livro!" });
