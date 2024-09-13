@@ -2,7 +2,6 @@
   "name": "livrosobjeto",
   "version": "1.0.0",
   "description": "Sistema de Gerenciamento de LivrosObjetivo",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js"
