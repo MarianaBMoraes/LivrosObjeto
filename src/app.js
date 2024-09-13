@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Rotas
 app.use('/autor', autor_routes);
-app.use('/livros', livro_routes);
+app.use('/livro', livro_routes);
 
 // Porta
 const PORT = process.env.PORT || 5000;
