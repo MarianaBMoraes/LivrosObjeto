@@ -18,7 +18,7 @@ app.use('/autor', autor_routes);
 app.use('/livro', livro_routes);
 
 // Porta
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
