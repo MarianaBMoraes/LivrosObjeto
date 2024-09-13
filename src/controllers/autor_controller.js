@@ -29,7 +29,7 @@ exports.getAutorById = async (req, res) => {
 
 exports.updateAutor = async (req, res) => {
   try {
-    const autor = await Auotr.findByIdAndUpdate(req.params.id, req.body, {
+    const autor = await Autor.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     res.status(200).json(autor);
